@@ -18,6 +18,6 @@ This is the over all task for Shell, init files, variables and expansions. And t
 12 | `12-combinations` | to print all possible combinations of two letters, except `oo` |
 | `13-print_float` | to print a number with two decimal places. The number is stored in the environment variable `NUM` |
 14 | `14-decimal_to_hexadecimal` | to convert a number from base 10 to base 16 |
-15 |ter and str` | to add the two numbers stored in the environment variables `WATER` and `STIR` and prints the result || `102-water and str` | to add the two numbers stored in the environment variables `WATER` and `STIR` and prints the result | `100-rot13` | to encodes and decodes text using the rot13 encryption |
+15 | `100-rot13` | to encodes and decodes text using the rot13 encryption |
 16 | `101-odd` | to print every other line from the input, starting with the first line |
-17 | `102-water and str` | to add the two numbers stored in the environment variables `WATER` and `STIR` and prints the result |
+17 | `102-water_and_str` | to add the two numbers stored in the environment variables `WATER` and `STIR` and prints the result |
