@@ -4,12 +4,13 @@ subreddit.
 """
 import requests
 
+
 def top_ten(subreddit):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple' +
         'WebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
         }
-    r = requests.get('https://www.reddit.com/r/{:}/hot.json?limit=10'.format(
+    r = requests.get('https://www.reddit.com/r/{:s}/hot.json?limit=10'.format(
         subreddit), headers=headers, allow_redirects=False)
     if r.status_code < 300:
         json = r.json()
