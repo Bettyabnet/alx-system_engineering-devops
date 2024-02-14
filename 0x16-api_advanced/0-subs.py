@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple' +
             'WebKit/537.36 (KHTML, like Gecko)Chrome/121.0.0.0 Safari/537.36'
     }
-    r = requests.get('https://www.reddit.com/r/{:s}/about.json'.format(
+    r = requests.get('https://www.reddit.com/r/{:}/about.json'.format(
         subreddit), headers=headers, allow_redirects=False)
     if r.status_code >= 300:
         return 0
