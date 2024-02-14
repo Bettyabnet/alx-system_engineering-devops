@@ -10,13 +10,8 @@ def number_of_subscribers(subreddit):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple' +
             'WebKit/537.36 (KHTML, like Gecko)Chrome/121.0.0.0 Safari/537.36'
     }
-    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    try:
-        response = requests.get(url, headers=headers, allow_redirects=False)
-        if response.status_code == 200:
-            data = response.json()
-            subscribers = data['data']['subscribers']
-            return subscribers
-    except requests.exceptions.RequestException as e:
-        pass
-    return 0
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 404:
+        return 0
+    results = response.json().get("data")
+    return results.get("subscribers")
