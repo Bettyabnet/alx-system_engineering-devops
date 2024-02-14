@@ -12,10 +12,10 @@ def number_of_subscribers(subreddit):
     User_Agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/121.0.0.0 Safari/537.36'
     headers = {'User-Agent': User_Agent}
 
-    r = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers)
     
-    if r.status_code == 200:
-        data = r.json()
+    if response.status_code == 200:
+        data = response.json()
         subscribers = data.get('data').get('subscribers')
         return subscribers
     else:
