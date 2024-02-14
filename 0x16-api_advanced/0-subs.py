@@ -6,14 +6,17 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple' +
-            'WebKit/537.36 (KHTML, like Gecko)Chrome/121.0.0.0 Safari/537.36'
-    }
-    r = requests.get('https://www.reddit.com/r/{:}/about.json'.format(
-        subreddit), headers=headers, allow_redirects=False)
-    if r.status_code >= 300:
+    """ Return the number of subscribers.
+    """
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    User_Agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)Chrome/121.0.0.0 Safari/537.36'
+    headers = {'User-Agent': User_Agent}
+
+    r = requests.get(url, headers=headers)
+    
+    if r.status_code == 200:
+        data = r.json()
+        subscribers = data.get('data').get('subscribers')
+        return subscribers
+    else:
         return 0
-    json = r.json()
-    data_dict = json.get('data')
-    return (data_dict.get('subscribers'))
