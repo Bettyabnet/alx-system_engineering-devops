@@ -1,5 +1,6 @@
 # install flask from pip3.
-package { 'flask':
-  ensure   => '2.1.0',
-  provider => 'pip3',
+exec { 'install_flask':
+  command => 'pip3 install flask==2.1.0',
+  path    => ['/usr/bin/'],
+  unless  => 'pip3 show flask | grep -q "Version: 2.1.0"',
 }
