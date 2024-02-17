@@ -4,7 +4,7 @@
 docker run -p 8080:80 -d -it holbertonschool/265-0
 
 # Connect to the running container
-docker exec -ti 5dc3cfa8cd0e /bin/bash
+docker exec -ti <container_id> /bin/bash
 
 # Check if Apache service is running
 service apache2 status
