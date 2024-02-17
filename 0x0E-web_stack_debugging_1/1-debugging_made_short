@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Sets nginx for listening to 80 port
-sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
-sudo service nginx restart
-kill -9 "$(cat /var/run/nginx.pid)"
+#configure Nginx to listen on port 80 of all the server’s active IPv4 IPs
+
+# To create a symbolic link (-s option) between the Nginx 
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# To restart nginx
+service nginx restart
+# To Terminate
+kill "$(pgrep 'nginx' | head -1)"
