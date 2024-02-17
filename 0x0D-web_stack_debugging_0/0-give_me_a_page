@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Get Apache to run on the container and to return a page containing Hello Holberton
+# Get Apache to run on the container and when apache2 is running return a page containing Hello Holberton
 service apache2 start
 service apache2 status | grep "apache2 is running"
