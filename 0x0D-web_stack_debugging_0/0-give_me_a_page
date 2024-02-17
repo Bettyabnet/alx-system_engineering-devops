@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # Get Apache to run on the container and to return a page containing Hello Holberton
 service apache2 start
+# Check if Apache service is running
+is_running=$(docker exec "$container_id" service apache2 status | grep "apache2 is running")
