@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Start the Docker container
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Connect to the running container
+docker exec -ti 5dc3cfa8cd0e /bin/bash
+
+# Check if Apache service is running
+service apache2 status
+
+# Start Apache service if it's not running
+service apache2 start
+
+# Verify Apache is listening on port 80
+netstat -tuln | grep 80
+
+# Edit Apache configuration file if necessary
+nano /etc/apache2/sites-available/000-default.conf
+
+# Exit the container's shell
+exit
+
+# Test the container by curling port 8080 and found "Hello Holberton"
+curl 0:8080
