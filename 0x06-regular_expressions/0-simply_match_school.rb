@@ -1,9 +1,3 @@
-regex = /School/
-
-input = ARGV[0]
-
-if input.match?(regex)
-  puts 'School'
-else
-  puts ''
-end
+#!/usr/bin/env ruby
+# Simply matching Holberton
+puts ARGV[0].scan(/School/).join
