@@ -1,0 +1,15 @@
+The Open Systems Interconnection (OSI) model is a conceptual framework that describes the different layers involved in network communication. It was created by the International Organization for Standardization (ISO) in the 1980s as a way to standardize how different computer systems could communicate with each other.
+
+The OSI model is not a physical specification that network hardware manufacturers must follow. Instead, it is a reference model that provides a common language for understanding how network communication works. The model is organized into seven layers, each with its own specific functions.
+
+Here are the seven layers of the OSI model, from lowest to highest level:
+
+1. Physical Layer: The physical layer is responsible for the transmission of raw data bits across a physical medium, such as a cable or a wireless signal.
+2.Data Link Layer: The data link layer is responsible for packaging data into frames and transmitting them between network devices on the same network segment.
+3.Network Layer: The network layer is responsible for routing data packets across different networks. It determines the best path for data to take to reach its destination.
+4. Transport Layer: The transport layer is responsible for providing reliable data transfer between applications on different computers. It ensures that data is delivered in the correct order and without errors.
+5.Session Layer: The session layer is responsible for establishing, managing, and terminating sessions between communicating applications.
+6. Presentation Layer: The presentation layer is responsible for formatting data so that it can be understood by the receiving application. This includes tasks such as encryption, decryption, and compression.
+7. Application Layer: The application layer is the layer that provides network services to applications. This includes services such as file transfer, email, and web browsing.
+
+The OSI model is a valuable tool for understanding how network communication works. It is still widely used today, even though the actual protocols used in network communication may differ from the OSI model.
