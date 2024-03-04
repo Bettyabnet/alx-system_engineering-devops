@@ -1,12 +1,2 @@
-#!/usr/bin/env bash
-What is a MAC address?
-1.A MAC address (Media Access Control address) is the unique identifier assigned to a network interface. It is a hardware address that is associated with the physical network adapter of a device, such as a computer or a network card. 
-2.MAC addresses are used at the data link layer of the OSI model to uniquely identify devices on a local network. 
-3.Each network interface has its own unique MAC address, which is typically represented as a series of six pairs of hexadecimal digits separated by colons or hyphens.
-
-What is an IP address?
-1. An IP address (Internet Protocol address) is a unique numerical label assigned to each device connected to a computer network. It serves as an identifier for devices, similar to how a postal address identifies a house.
-
-2. IP addresses are used for communication and routing purposes in network protocols. They enable devices to send and receive data across networks. An IP address consists of a series of numbers separated by periods (IPv4) or alphanumeric characters separated by colons (IPv6).
-
-3. IP address is a number that network devices use to connect to networks and communicate with each other. It allows devices to be identified and enables the routing of data over the Internet or within a local network.
+2
+1
